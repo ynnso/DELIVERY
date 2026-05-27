@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Media is Ready - Shoot2Sell</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f8f8;
+            color: #000;
+            line-height: 1.6;
+        }
+        
+        .email-container {
+            max-width: 560px;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+        
+        .header {
+            padding: 24px 20px;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .logo {
+            font-size: 32px;
+            font-weight: 700;
+            color: #000;
+            letter-spacing: -0.5px;
+        }
+        
+        .logo span {
+            color: #c41e3a;
+        }
+        
+        .logo-tagline {
+            font-size: 12px;
+            color: #999;
+            margin: 8px 0 0;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+        
+        .hero-image {
+            width: 100%;
+            max-width: 560px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .address-section {
+            padding: 24px 20px;
+            text-align: center;
+            background-color: #fafafa;
+            border-top: 1px solid #f0f0f0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .address {
+            font-size: 28px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+        
+        .status {
+            font-size: 16px;
+            font-weight: 400;
+            color: #666;
+            margin-bottom: 0;
+        }
+        
+        .primary-cta-section {
+            padding: 32px 20px;
+            text-align: center;
+            background-color: #ffffff;
+        }
+        
+        .primary-cta-button {
+            display: inline-block;
+            width: 100%;
+            max-width: 520px;
+            padding: 16px 24px;
+            background-color: #c41e3a;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 6px;
+            border: 2px solid #c41e3a;
+            transition: all 0.2s ease;
+            font-family: 'Montserrat', sans-serif;
+            cursor: pointer;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        
+        .primary-cta-button:hover {
+            background-color: #a81830;
+            border-color: #a81830;
+        }
+        
+        .cta-subtext {
+            font-size: 12px;
+            color: #999;
+            margin-top: 12px;
+            font-weight: 400;
+        }
+        
+        .secondary-cta-section {
+            padding: 24px 20px;
+            border-top: 1px solid #f0f0f0;
+            border-bottom: 1px solid #f0f0f0;
+            background-color: #fafafa;
+        }
+        
+        .secondary-cta-button {
+            display: inline-block;
+            width: 100%;
+            padding: 14px 24px;
+            background-color: #ffffff;
+            color: #000;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            border: 2px solid #000;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            font-family: 'Montserrat', sans-serif;
+            cursor: pointer;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        
+        .secondary-cta-button:hover {
+            background-color: #f0f0f0;
+            border-color: #666;
+        }
+        
+        .secondary-cta-label {
+            font-size: 12px;
+            color: #666;
+            margin-top: 8px;
+            font-weight: 400;
+        }
+        
+        .help-section {
+            padding: 24px 20px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 16px;
+        }
+        
+        .quick-tip {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        
+        .quick-tip strong {
+            color: #000;
+            font-weight: 600;
+        }
+        
+        .quick-tip a {
+            color: #c41e3a;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .quick-tip a:hover {
+            text-decoration: underline;
+        }
+        
+        .review-section {
+            padding: 24px 20px;
+            background-color: #fafafa;
+            border-bottom: 1px solid #f0f0f0;
+            text-align: center;
+        }
+        
+        .stars {
+            font-size: 18px;
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+        }
+        
+        .review-text {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .review-link {
+            color: #c41e3a;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .review-link:hover {
+            text-decoration: underline;
+        }
+        
+        .referral-section {
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 6px;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        
+        .referral-text {
+            font-size: 13px;
+            color: #666;
+        }
+        
+        .referral-link {
+            color: #c41e3a;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .referral-link:hover {
+            text-decoration: underline;
+        }
+        
+        .signature-section {
+            padding: 24px 20px;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .signature-text {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        
+        .signature-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #000;
+        }
+        
+        .signature-company {
+            font-size: 13px;
+            color: #999;
+        }
+        
+        .footer-section {
+            padding: 24px 20px;
+        }
+        
+        .footer-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 12px;
+        }
+        
+        .footer-content {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        .footer-link {
+            color: #c41e3a;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+        
+        .divider {
+            height: 1px;
+            background-color: #f0f0f0;
+            margin: 24px 20px;
+        }
+        
+        .disclaimer {
+            padding: 0 20px 20px;
+            font-size: 11px;
+            color: #999;
+            line-height: 1.5;
+        }
+        
+        @media (max-width: 600px) {
+            .email-container {
+                max-width: 100%;
+            }
+            
+            .address {
+                font-size: 24px;
+            }
+            
+            .primary-cta-button {
+                max-width: 100%;
+            }
+            
+            .header {
+                padding: 20px 16px;
+            }
+            
+            .primary-cta-section {
+                padding: 24px 16px;
+            }
+            
+            .secondary-cta-section {
+                padding: 20px 16px;
+            }
+            
+            .help-section,
+            .review-section,
+            .signature-section,
+            .footer-section {
+                padding: 20px 16px;
+            }
+            
+            .address-section {
+                padding: 20px 16px;
+            }
+            
+            .divider {
+                margin: 20px 16px;
+            }
+            
+            .disclaimer {
+                padding: 0 16px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        
+        <!-- Header / Logo -->
+        <div class="header">
+            <div class="logo">shoot<span>2</span>sell</div>
+            <p class="logo-tagline">Your photos await</p>
+        </div>
+        
+        <!-- Hero Image -->
+        <img src="https://via.placeholder.com/560x380?text=Property+Photo" alt="123 Main St, Dallas" class="hero-image">
+        
+        <!-- Address & Status -->
+        <div class="address-section">
+            <h1 class="address">123 Main St<br>Dallas, TX 75206</h1>
+            <p class="status">Ready to impress your buyers</p>
+        </div>
+        
+        <!-- Primary CTA -->
+        <div class="primary-cta-section">
+            <a href="#" class="primary-cta-button">See Your Photos</a>
+            <p class="cta-subtext">Your photos are ready to use</p>
+        </div>
+        
+        <!-- Secondary CTA - Agent Tools -->
+        <div class="secondary-cta-section">
+            <a href="#" class="secondary-cta-button">Photo Tools & Downloads</a>
+            <p class="secondary-cta-label">Edit, download, and customize your photos for your needs</p>
+        </div>
+        
+        <!-- Help Section -->
+        <div class="help-section">
+            <h2 class="section-title">Getting Started</h2>
+            
+            <div class="quick-tip">
+                <strong>First time here?</strong> Log in with your email as username, same email (lowercase) as password. <a href="#">Update in your profile.</a>
+            </div>
+            
+            <div class="quick-tip">
+                <strong>Need access?</strong> Only the primary agent can edit & download. Ask them to share access, or <a href="#">contact us.</a>
+            </div>
+            
+            <div class="quick-tip">
+                <strong>Want changes?</strong> Email <a href="mailto:delivery@shoot2sell.net">delivery@shoot2sell.net</a> within 7 days for edits or revisions.
+            </div>
+        </div>
+        
+        <!-- Review Section -->
+        <div class="review-section">
+            <div class="stars">★ ★ ★ ★ ★</div>
+            <p class="review-text">Loved your photos? <a href="#" class="review-link">Leave us a 5-star Google review →</a></p>
+        </div>
+        
+        <!-- Referral Section -->
+        <div class="help-section">
+            <div class="referral-section">
+                <p class="referral-text">Know another agent? <a href="#" class="referral-link">Refer a friend & get $25 off your next shoot →</a></p>
+            </div>
+        </div>
+        
+        <!-- Signature -->
+        <div class="signature-section">
+            <p class="signature-text">We loved working with you. Dive in and let us know what you think!</p>
+            <p class="signature-name">Alex Chi</p>
+            <p class="signature-company">Shoot2Sell</p>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer-section">
+            <p class="footer-title">Contact Us</p>
+            <p class="footer-content">
+                <a href="https://shoot2sell.com" class="footer-link">shoot2sell.com</a> • <a href="mailto:contact@shoot2sell.net" class="footer-link">contact@shoot2sell.net</a><br><br>
+                <strong>Dallas/Fort Worth</strong> 214.272.3200<br>
+                <strong>Houston</strong> 346.980.4800<br>
+                <strong>Austin</strong> 512.649.9003<br>
+                <strong>San Antonio</strong> 210.200.8984
+            </p>
+            
+            <div class="divider"></div>
+            
+            <p class="footer-title">Help & Resources</p>
+            <p class="footer-content">
+                <a href="#" class="footer-link">Dashboard FAQ</a> • <a href="#" class="footer-link">Help Center</a>
+            </p>
+        </div>
+        
+        <!-- Disclaimer -->
+        <div class="disclaimer">
+            <p>Images & videos are non-transferable and must be credited to Shoot2Sell. All photos are the exclusive property of Shoot2Sell and licensed for use by the property agent and seller only.</p>
+        </div>
+        
+    </div>
+</body>
+</html>
